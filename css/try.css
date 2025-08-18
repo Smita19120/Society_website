@@ -238,8 +238,9 @@ h6,
 
     .scheme-card {
       background: #fff;
-      border: 1px solid #d6c6a5;
+      border: 2px solid #d6c6a5;
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
     }
 
     .scheme-card ul li {
@@ -2084,7 +2085,7 @@ h6,
 
     .glass-footer {
       background: rgba(255,255,255,0.08);
-      border-radius: 24px;
+      /* border-radius: 24px; */
       box-shadow: 0 8px 32px rgba(33,150,243,0.10);
       backdrop-filter: blur(4px);
       border: 1.5px solid rgba(255,255,255,0.18);
@@ -2147,6 +2148,8 @@ h6,
   margin-bottom: 32px;
   position: relative;
   overflow: hidden;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .hero-slide-content {
@@ -2235,6 +2238,11 @@ h6,
     border-radius: 18px;
     animation: heroImgFloat 2.2s ease-in-out infinite alternate;
   }
+
+  .hero-slider {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2244,6 +2252,11 @@ h6,
     max-width: 99vw;
     border-radius: 10px;
     animation: heroImgFloat 1.7s ease-in-out infinite alternate;
+  }
+
+  .hero-slider {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
 
@@ -2328,3 +2341,49 @@ h6,
     height: 60px;
   }
 }
+
+/* Keep font size same for 1200px and 1400px screens */
+@media (min-width: 1200px), (min-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* Commitment Section Flex Row */
+.commitment-section .container {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .commitment-section .container {
+    flex-direction: column !important;
+    gap: 1.2rem;
+  }
+  .commitment-section h2 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* ...existing code... */
+
+/* Animated Arrow Icon */
+.animated-arrow {
+  display: inline-block;
+  animation: arrowMove 1.2s infinite alternate;
+}
+
+@keyframes arrowMove {
+  0% { transform: translateX(0); opacity: 1; }
+  60% { transform: translateX(10px); opacity: 0.7; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* ...existing code... */
