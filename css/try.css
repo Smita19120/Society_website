@@ -1193,7 +1193,7 @@ h6,
         }
 
         .download-btn:hover {
-            background: var(--primary-light);
+            background: #926e03;
             transform: translateY(-3px);
         }
 
@@ -2200,7 +2200,7 @@ h6,
   object-fit: cover;
   background: #fffbe7;
   transition: filter 0.4s;
-  animation: heroImgFloat 3s ease-in-out infinite alternate;
+  
 }
 
 @keyframes heroImgFloat {
@@ -2221,7 +2221,7 @@ h6,
     width: 98vw;
     max-width: 98vw;
     border-radius: 18px;
-    animation: heroImgFloat 2.2s ease-in-out infinite alternate;
+    
   }
 
   .hero-slider {
@@ -2236,7 +2236,7 @@ h6,
     width: 99vw;
     max-width: 99vw;
     border-radius: 10px;
-    animation: heroImgFloat 1.7s ease-in-out infinite alternate;
+    
   }
 
   .hero-slider {
