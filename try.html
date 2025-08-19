@@ -71,35 +71,36 @@
 
   <!-- Bootstrap CSS (needed for dropdown functionality) -->
 
-
   <nav>
-    <div class="links">
-      <a href="try.html"><i class="fa fa-home me-1"></i> Home</a>
-      <a href="about_updated (1).html"><i class="fa fa-user me-1"></i> About Us</a>
-
-      <!-- Organization with submenu -->
-      <div class="dropdown d-inline-block">
-        <a href="#" class="dropdown-toggle" id="orgDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-building me-1"></i> Organization
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="orgDropdown">
-          <li><a class="dropdown-item" href="founder.html" style="color: black;"><i class="fa fa-user-tie me-1"></i> Founder Director</a></li>
-          <li><a class="dropdown-item" href="directors.html" style="color: black;"><i class="fa fa-users me-1"></i> Board Director</a></li>
-          <!-- <li><a class="dropdown-item" href="#" style="color: black;"><i class="fa fa-users-cog me-1"></i> Committee</a></li> -->
-        </ul>
-      </div>
-
-      <a href="services.html"><i class="fa fa-cogs me-1"></i> Services</a>
-      <a href="gallery.html"><i class="fa fa-images me-1"></i> Gallery</a>
-      <a href="branch.html"><i class="fa fa-map-marker-alt me-1"></i> Branch</a>
-      <a href="contact.html"><i class="fa fa-envelope me-1"></i> Contact</a>
-    </div>
-
-    <div class="phone">
-      <span class="phone-icon"><img src="img/call2.png.webp" alt=""></span>
-      <span>+800 49 900 900</span>
-    </div>
-  </nav>
+        <button class="menu-toggle-about d-block d-md-none " aria-label="Toggle navigation">
+            <i class="fa fa-bars" style="color: #003679; padding-bottom: 4vh;" ></i>
+        </button>
+        <div class="links">
+            <a href="try.html"><i class="fa fa-home me-1"></i> Home</a>
+            <a href="about_updated (1).html"><i class="fa fa-user me-1"></i> About Us</a>
+            <div class="dropdown d-inline-block">
+                <a href="#" class="dropdown-toggle" id="orgDropdown"
+                    onclick="event.preventDefault(); this.nextElementSibling.classList.toggle('show');"
+                    aria-expanded="false">
+                    <i class="fa fa-building me-1"></i> Organization
+                </a>
+                <ul class="dropdown-menu mt-lg-4" aria-labelledby="orgDropdown" style="display: none;">
+                    <li><a class="dropdown-item" href="founder.html" style="color: black;"><i
+                                class="fa fa-user-tie me-1"></i> Founder Director</a></li>
+                    <li><a class="dropdown-item" href="directors.html" style="color: black;"><i
+                                class="fa fa-users me-1"></i> Board Director</a></li>
+                </ul>
+            </div>
+            <a href="services.html"><i class="fa fa-cogs me-1"></i> Services</a>
+            <a href="gallery.html"><i class="fa fa-images me-1"></i> Gallery</a>
+            <a href="branch.html"><i class="fa fa-map-marker-alt me-1"></i> Branch</a>
+            <a href="contact.html"><i class="fa fa-envelope me-1"></i> Contact</a>
+        </div>
+        <div class="phone">
+            <span class="phone-icon"><img src="img/call2.png.webp" alt=""></span>
+            <span>+800 49 900 900</span>
+        </div>
+    </nav>
 
 
 
@@ -119,7 +120,10 @@
               </div>
               <!-- Right: Image -->
               <div class="col-lg-6 col-md-5 col-12 hero-slide-image d-flex justify-content-center align-items-center px-5 py-5">
-                <img src="img/hero2.jpg" alt="Financial Partner" class="img-fluid rounded shadow hero-img" style="max-width: 420px; min-width: 220px; object-fit: cover;">
+               <img src="img/hero2.jpg" alt="Financial Partner" 
+     class="img-fluid rounded shadow hero-img w-100" 
+     style="object-fit: cover; height:100%;">
+
               </div>
             </div>
           </div>
@@ -132,7 +136,9 @@
                 <a href="services.html" class="btn-modern-hero"><i class="fa fa-cogs me-2"></i>Our Services</a>
               </div>
               <div class="col-lg-6 col-md-5 col-12 hero-slide-image d-flex justify-content-center align-items-center px-5 py-5">
-                <img src="img/about.jpg" alt="Empowering Future" class="img-fluid rounded shadow hero-img" style="max-width: 420px; min-width: 220px; object-fit: cover;">
+                <img src="img/hero2.jpg" alt="Financial Partner" 
+     class="img-fluid rounded shadow hero-img w-100" 
+     style="object-fit: cover; height:100%;">
               </div>
             </div>
           </div>
@@ -145,7 +151,9 @@
                 <a href="about.html" class="btn-modern-hero"><i class="fa fa-info-circle me-2"></i>About Us</a>
               </div>
               <div class="col-lg-6 col-md-5 col-12 hero-slide-image d-flex justify-content-center align-items-center px-5 py-5">
-                <img src="img/blog-2.jpg" alt="Banking Solutions" class="img-fluid rounded shadow hero-img" style="max-width: 420px; min-width: 220px; object-fit: cover;">
+                <img src="img/hero2.jpg" alt="Financial Partner" 
+     class="img-fluid rounded shadow hero-img w-100" 
+     style="object-fit: cover; height:100%;">
               </div>
             </div>
           </div>
@@ -313,18 +321,18 @@
     </div>
   </section>
 
-  <section>
+   <section>
     <div class="container-fluid why-choose-us py-5">
 
       <div class="container py-5">
-        <!-- Section Title -->
+        
         <div class="text-center mb-5">
           <h5 class="fw-bold text-uppercase text-accent animated fadeInDown">Why Choose Us</h5>
-          <h1 class="display-5 fw-bold text-white animated fadeInUp">We Stand Out For Our Excellence</h1>
+         
           <p class="text-light w-75 mx-auto animated fadeIn">We are committed to delivering transparent, reliable, and
             customer-focused financial solutions designed to empower your future.</p>
         </div>
-        <!-- Feature Cards -->
+       
         <div class="row g-4">
           <div class="col-lg-3 col-md-6">
             <div class="choose-card glass-card text-center p-4 animated zoomIn" style="animation-delay:0.1s;">
@@ -365,74 +373,137 @@
           </div>
         </div>
       </div>
-  </section>
+  </section> 
+
+  <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 800px;">
+                <h5 class="fw-bold text-uppercase">Why Choose Us</h5>
+                <h1 class="mb-0">Customer satisfaction and trust are the pillars of our strength</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                            <div class=" rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; background-color: #02336b;">
+                                <i class="fa fa-cubes text-white"></i>
+                            </div>
+                            <h4>Dedicated Team</h4>
+                            <p class="mb-0">Our professional staff is committed to providing excellent service and support, ensuring all your financial needs are met with the utmost care and efficiency.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                            <div class=" rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;  background-color: #02336b;">
+                                <i class="fa fa-award text-white"></i>
+                            </div>
+                            <h4>Expertise:</h4>
+                            <p class="mb-0">With years of experience in the financial sector, we bring a wealth of knowledge and expertise to help you achieve your financial goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/feature.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                            <div class=" rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;  background-color: #02336b;">
+                                <i class="fa fa-users-cog text-white"></i>
+                            </div>
+                            <h4>Comprehensive Services:</h4>
+                            <p class="mb-0">From savings and deposit schemes to loan facilities, we offer a wide range of financial products designed to cater to the diverse needs of our customers.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                            <div class=" rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;  background-color: #02336b;">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <h4>Customer Satisfaction:</h4>
+                            <p class="mb-0">Customer satisfaction and trust are the pillars of our strength, and we strive to build long-lasting relationships with our clients through transparency and reliability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
 
-  <div class="container-fluid py-5 pt-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 1000px;">
-        <h5 class="fw-bold text-uppercase">Our Services</h5>
-        <h1 class="mb-0">Custom Solutions for Your Successful Banking</h1>
+  <!-- Service Section -->
+<div class="container-fluid pt-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container py-5">
+    
+    <!-- Section Title -->
+    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 1000px;">
+      <h5 class="fw-bold text-uppercase">Our Services</h5>
+      <!-- <h1 class="mb-0">Custom Solutions for Your Successful Banking</h1> -->
+    </div>
+
+    <!-- Services Grid -->
+    <div class="row g-5">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item d-flex">
+          <div class="service-icon"><i class="fa fa-chart-line"></i></div>
+          <div class="service-content">
+            <h4>All the loans</h4>
+            <p>Morbi ut dapibus dui. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem.</p>
+          </div>
+        </div>
       </div>
-      <div class="row g-5">
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="fa fa-shield-alt text-white"></i>
-            </div>
-            <h4 class="mb-3">Core Banking</h4>
-            <p class="m-0">We provide all Core Banking facilities for our customers.</p>
-            <a class="btn btn-lg btn-primary rounded" href="#"><i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="fa fa-chart-pie text-white"></i>
-            </div>
-            <h4 class="mb-3">NEFT/RTGS</h4>
-            <p class="m-0">We provide NEFT/RTGS facilities for our customers.</p>
-            <a class="btn btn-lg btn-primary rounded" href="#"><i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="fa fa-search text-white"></i>
-            </div>
-            <h4 class="mb-3">Nidhi App</h4>
-            <p class="m-0">Our mobile app allows you to manage your account from your mobile.</p>
-            <a class="btn btn-lg btn-primary rounded" href="#"><i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="fa fa-shield-alt text-white"></i>
-            </div>
-            <h4 class="mb-3">Cheque Book</h4>
-            <p class="m-0">We offer a fund cheque book that can be used within our institution.</p>
-            <a class="btn btn-lg btn-primary rounded" href="#"><i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-          <div
-            class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-            <h3 class="text-white mb-3">Call Us for Banking</h3>
-            <p class="text-white mb-3">At Navi Mumbai Nagarik Co-Operative Credit Society Limited. Based in Navi
-              Mumbai, Maharashtra, India.</p>
-            <h2 class="text-white mb-0">7208789033</h2>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item d-flex">
+          <div class="service-icon"><i class="fa fa-bolt"></i></div>
+          <div class="service-content">
+            <h4>Easy and fast answer</h4>
+            <p>Morbi ut dapibus dui. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem.</p>
           </div>
         </div>
-
       </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item d-flex">
+          <div class="service-icon"><i class="fa fa-file-alt"></i></div>
+          <div class="service-content">
+            <h4>No additional papers</h4>
+            <p>Morbi ut dapibus dui. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item d-flex">
+          <div class="service-icon"><i class="fa fa-lock"></i></div>
+          <div class="service-content">
+            <h4>Secure financial services</h4>
+            <p>Morbi ut dapibus dui. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item d-flex">
+          <div class="service-icon"><i class="fa fa-gem"></i></div>
+          <div class="service-content">
+            <h4>Good investments</h4>
+            <p>Morbi ut dapibus dui. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item d-flex">
+          <div class="service-icon"><i class="fa fa-piggy-bank"></i></div>
+          <div class="service-content">
+            <h4>Accumulation goals</h4>
+            <p>Morbi ut dapibus dui. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+</div>
   <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
       <div class="row gx-5">
@@ -519,7 +590,8 @@
 
 
 
-
+<a target="new" href="#" class="btn btn-lg btn-lg-square rounded back-to-top" style="background: #ffca28;"><i
+            class="bi bi-arrow-up"></i></a>
 
   <!-- JavaScript Libraries -->
   <script src="code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -532,6 +604,10 @@
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
+  
+  
+
+ 
 </body>
 
 </html>
