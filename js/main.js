@@ -124,3 +124,39 @@
     
 })(jQuery);
 
+//menu-btn
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle-about');
+  const navLinks = document.querySelector('nav .links');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+    // Only close menu when a direct nav link (not dropdown toggle) is clicked
+    navLinks.querySelectorAll('a:not(.dropdown-toggle)').forEach(link => {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('show');
+      });
+    });
+    // Close menu when a dropdown submenu item is clicked
+    navLinks.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+      item.addEventListener('click', function () {
+        navLinks.classList.remove('show');
+      });
+    });
+  }
+
+  // Dropdown for Organization submenu (for mobile)
+  document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+      }
+    });
+  });
+});
+
+
+
